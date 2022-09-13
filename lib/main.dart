@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'image_test.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,28 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Test App",
-      home: SafeArea(
-          child: Scaffold(
-        appBar: AppBar(
-          title: const Text("First_App"),
-          centerTitle: true,
-          elevation: 0,
-          actions: const [
-            Icon(Icons.add_circle_outline_outlined),
-            Icon(Icons.settings),
-          ],
-        ),
-        body: const Center(
-          child: Text(
-            "Welcome to chitwan",
-            style: TextStyle(
-              color: Colors.greenAccent,
-              fontSize: 25,
-            ),
-            textAlign: TextAlign.start,
-          ),
-        ),
-      )),
+      home: ImageTest(),
+      theme: ThemeData(
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
     );
   }
 }
